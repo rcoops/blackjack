@@ -1,0 +1,12 @@
+</div>
+            <div id="footer" class="grid_16">
+            <p>Footer here</p>
+            </div>
+        </div>
+
+<?php
+	require_once 'autoload.php';
+	echo (isset($view->filesToPrint)?GenericFunctions::generateCodeListing($view->filesToPrint):GenericFunctions::generateCodeListing(array()));
+?>
+    </body>
+</html>

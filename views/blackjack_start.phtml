@@ -1,0 +1,28 @@
+<?php require('template/header.phtml') ?>
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <div>
+        <label>Select Players:</label>
+        <select name="players">
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+        </select>
+    </div>
+    <div>
+        <label>Select Decks:</label>
+        <select name="decks">
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="submit" name="submit" />
+    </div>
+</form>
+<?php if (isset($view->result)) : ?>
+    <p><?php echo $view->result; ?></p>
+<?php endif; ?>
+<?php require('template/footer.phtml') ?>
